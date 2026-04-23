@@ -1,0 +1,21 @@
+# Normalize all text files to LF line endings in the repository.
+# Windows users' working trees keep CRLF via core.autocrlf if they want;
+# the repo itself only stores LF.
+* text=auto eol=lf
+
+# Windows-only scripts must keep CRLF even locally.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Treat these as binary — do not touch line endings, do not diff as text.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.gz binary
+*.tgz binary
